@@ -1,0 +1,26 @@
+.box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  &__icon {
+    color: var(--color-white);
+    background-color: var(--primary-color);
+    border-radius: 100%;
+    font-size: 4rem;
+    position: relative;
+    width: 85px;
+    height: 85px;
+    line-height: 85px !important;
+    border-radius: 100%;
+    text-align: center;
+    display: inline-block !important;
+    margin-bottom: 2rem;
+  }
+
+  &__title {
+    margin-bottom: -2rem;
+    color: var(--color-grey-dark-0);
+    font-size: 1.6rem;
+  }
+}

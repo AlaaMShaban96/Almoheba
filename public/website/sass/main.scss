@@ -1,0 +1,30 @@
+@import "abstract/mixins";
+@import "base/variables";
+@import "abstract/container";
+@import "abstract/utilities";
+
+//Typography
+@import "typography.scss";
+
+//base
+@import "base/base";
+
+//components
+@import "components/loader";
+@import "components/hamburger_menu";
+@import "components/navigation";
+@import "components/btn";
+@import "components/box";
+@import "components/form";
+@import "components/footer";
+@import "components/card-info";
+
+//Layout
+@import "layout/header";
+
+//Pages
+@import "pages/home";
+@import "pages/login";
+@import "pages/team";
+@import "pages/about";
+@import "pages/projects";

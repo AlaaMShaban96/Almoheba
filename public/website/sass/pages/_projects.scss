@@ -1,0 +1,55 @@
+.project_section {
+  padding: 12rem 0;
+  .projects__content {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    color: white;
+    grid-gap: 6rem;
+    @include respond(tab-port) {
+      grid-template-columns: repeat(2, 1fr);
+      grid-gap: 3rem;
+    }
+    @include respond(phone) {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+}
+
+.overlay__header {
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.4s;
+}
+
+.overlay__paragraph {
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.4s;
+  margin: 0;
+}
+
+.project:hover .overlay__paragraph {
+  visibility: visible;
+  opacity: 1;
+}
+
+.project:hover .overlay__header {
+  visibility: visible;
+  opacity: 1;
+}
+.project:hover .overlay--2 {
+  padding: 3rem 1.5rem;
+}
+
+/*
+.overlay--2 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 0;
+  background-color: rgba($color-grey-dark-0, 0.9);
+  z-index: 4;
+  transition: all 0.2s;
+}
+*/

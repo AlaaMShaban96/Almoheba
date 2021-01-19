@@ -1,0 +1,70 @@
+.btn {
+  color: white;
+  background-color: $primary-color;
+  padding: 1.2rem 3rem;
+  border-radius: 2.5rem;
+  text-decoration: none;
+  border: solid 1px $primary-color;
+  margin-top: 1rem;
+  font-family: inherit;
+  /* padding: 0 30px;
+    height: 48px;
+    line-height: 46px;
+    text-transform: uppercase;
+    font-size: 12px;
+    -webkit-transition: all .3s ease;
+    transition: all .3s ease;
+    font-weight: 400;
+    font-family: 'Montserrat', sans-serif;
+    */
+  transition: all 0.4s;
+
+  &:hover {
+    background-color: var(--primary-color-dark);
+  }
+}
+
+.navigation__btn {
+  transition: all 0.4s;
+  &:hover {
+    background-color: var(--primary-color-dark);
+  }
+}
+
+.btn--submit {
+  width: fit-content;
+  margin: 2rem auto;
+  cursor: pointer;
+}
+
+.btn-black {
+  color: white;
+  background-color: var(--color-grey-dark-0);
+  &:hover {
+    background-color: white;
+    color: var(--color-grey-dark-0);
+  }
+}
+
+.btn-white {
+  color: var(--color-grey-dark-0);
+  background-color: white;
+  border: solid white 1px;
+  &:hover {
+    background-color: transparent;
+    color: white;
+  }
+}
+
+.btn-inline-block {
+  display: inline-block;
+}
+
+.btn--primary {
+  background-color: $primary-color !important;
+
+  &:hover {
+    background-color: $primary-color-dark !important;
+    cursor: pointer;
+  }
+}

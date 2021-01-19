@@ -16,7 +16,7 @@
           </div>
           <div class="card-footer">
             <div class="stats">
-              <a href="{{url('dashboard/team')}}">
+              <a href="{{url('Dashboard/team')}}">
                 <i class="material-icons">local_offer</i> عرض 
               </a>
               
@@ -37,7 +37,7 @@
           </div>
           <div class="card-footer">
             <div class="stats">
-              <a href="{{url('dashboard/project')}}">
+              <a href="{{url('Dashboard/project')}}">
                 <i class="material-icons">local_offer</i> عرض 
               </a>
             </div>
@@ -55,7 +55,7 @@
           </div>
           <div class="card-footer">
             <div class="stats">
-              <a href="{{url('dashboard/aboutUs')}}">
+              <a href="{{url('Dashboard/aboutUs')}}">
                 <i class="material-icons">local_offer</i> عرض 
               </a> 
             </div>

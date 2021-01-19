@@ -45,7 +45,7 @@
               <div class="table-responsive">
                 
                 <div class="card-body">
-                    <form id="card-form" id="" action="{{url('dashboard/project')}}" method="POST" enctype="multipart/form-data">
+                    <form id="card-form" id="" action="{{url('Dashboard/project')}}" method="POST" enctype="multipart/form-data">
                       @csrf
                       @method('POST')
                       <div class="row">
@@ -173,7 +173,7 @@
                         <a href="#" onclick="deletee({{$project->id}})" rel="tooltip"  class="btn btn-danger btn-link btn-sm" >
                           <i class="material-icons">close</i>
                         </a>
-                        <form style="display: none" id="delete{{$project->id}}" action="{{url('dashboard/project/'.$project->id)}}" method="post">
+                        <form style="display: none" id="delete{{$project->id}}" action="{{url('Dashboard/project/'.$project->id)}}" method="post">
                           @method('delete')
                           @csrf
                         {{-- <button  type="submit"></button> --}}
@@ -202,8 +202,8 @@
 @section('script')
 <script src="{{asset('assets/summernote/summernote-bs4.min.js')}}"></script>
 <script src="{{asset('assets/summernote/initiate-summernote.js')}}"></script>
-<script src="{{asset('/js/dashboard/project/index.js')}}"></script>
-<script src="{{asset('/js/dashboard/project/pagination.min.js')}}"></script>
+<script src="{{asset('dashboard/project/index.js')}}"></script>
+<script src="{{asset('dashboard/project/pagination.min.js')}}"></script>
 <script>
   function showProject(index) {
 

@@ -28,12 +28,12 @@
               <div class="card-body">
                  
                     @if (isset($aboutUs))
-                    <form id="" action='{{url("dashboard/aboutUs/$aboutUs->id")}}' method="POST" enctype="multipart/form-data">
+                    <form id="" action='{{url("Dashboard/aboutUs/$aboutUs->id")}}' method="POST" enctype="multipart/form-data">
                       @csrf  
                       @method('PUT')
  
                     @else
-                    <form id="" action='{{url("dashboard/aboutUs")}}' method="POST" enctype="multipart/form-data">
+                    <form id="" action='{{url("Dashboard/aboutUs")}}' method="POST" enctype="multipart/form-data">
                       @csrf  
                     @method('POST')
 
@@ -71,7 +71,7 @@
                       <div class="col">
                           <div class="form-group form-file-upload form-file-multiple bmd-form-group">
                               <div class="input-group">
-                                <h4><span class="tim-note">وصف  المؤسسة  : </h4>
+                                <h4><span class="tim-note">وصف  النشاط  : </h4>
                                   <br>
                                   <textarea name="description" id="description" class="form-control" rows="3" maxlength="150" >{{isset($aboutUs)? $aboutUs->description:''}}</textarea>
                                   <span class="input-group-btn">
@@ -88,7 +88,7 @@
                           <div class="form-group form-file-upload form-file-multiple bmd-form-group">
                               
                               <div class="input-group">
-                                <h4><span class="tim-note">عن  المؤسسة</h4>
+                                <h4><span class="tim-note"> تفاصيل النشاط</h4>
                                   <textarea name="details" id="details" class="form-control" rows="3" maxlength="150">{{isset($aboutUs)?$aboutUs->details:''}}</textarea>
                               </div>
                             </div>
@@ -106,13 +106,13 @@
         <div class="card card-profile">
           <div class="card-avatar">
             <a href="javascript:;">
-              <img class="img" src="{{asset('website/img/logo-icon.png')}}">
+              <img class="img" src="{{asset('website/img/logo-black.png')}}">
             </a>
           </div>
           <div class="card-body">
-            <h6 class="card-category text-gray">مؤسسة مجتمع مدني </h6>
+            <h6 class="card-category text-gray">شركة الموهيبة </h6>
             <h4 class="card-title">اسم المستخدم : admin1@nano-tech.ly</h4>
-            <form id="" action='{{url("dashboard/restpassword")}}' method="POST" enctype="multipart/form-data">
+            <form id="" action='{{url("Dashboard/restpassword")}}' method="POST" enctype="multipart/form-data">
               @csrf  
               @method('POST')
                 <p class="card-description">
@@ -132,21 +132,22 @@
                 <input type="submit" class="btn btn-danger btn-round"value="تغير كلمة السر ">
             </form>
           </div>
-        </div>
+        </div>\
+        @if ($errors->any())
+            @foreach ($errors->all() as $error)
+            <div class="alert alert-danger mt-1 alert-validation-msg" role="alert">
+                  <i class="feather icon-info mr-1 align-middle"></i>
+                  <span>{{ $error }}</span>
+              </div>
+            @endforeach
+        @endif
       </div>
     </div>
   </div>
 </div>
 
 
-@if ($errors->any())
-@foreach ($errors->all() as $error)
- <div class="alert alert-danger mt-1 alert-validation-msg" role="alert">
-      <i class="feather icon-info mr-1 align-middle"></i>
-      <span>{{ $error }}</span>
-  </div>
-@endforeach
-@endif
+
 @endsection
 @section('script')
 <script src="{{asset('assets/summernote/summernote-bs4.min.js')}}"></script>

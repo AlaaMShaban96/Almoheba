@@ -1,0 +1,43 @@
+.hamburger-menu {
+  display: none;
+  flex-direction: column;
+  position: relative;
+  width: 10rem;
+  height: 5rem;
+  @media only screen and (max-width: 765px) {
+    display: flex;
+  }
+  &__icon {
+    width: 5rem;
+    height: 0.5rem;
+    background-color: var(--color-grey-dark-0);
+    border-radius: 4px;
+    position: absolute;
+    transition: all 0.4s;
+  }
+
+  .icon--top {
+    //transform: rotate(130deg);
+    top: 2rem;
+  }
+
+  .icon--mid {
+    top: 3rem;
+  }
+
+  .icon--bottom {
+    //transform: rotate(-130deg);
+    top: 4rem;
+  }
+
+  &:hover .icon--top {
+    top: 1.5rem;
+  }
+
+  &:hover .icon--bottom {
+    top: 4.5rem;
+  }
+}
+
+.hamburger-menu--active {
+}

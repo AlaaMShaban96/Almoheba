@@ -1,0 +1,139 @@
+.who-we-are {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 4rem;
+
+  &__text {
+    padding: 6rem 1rem;
+  }
+
+  &__img {
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  @include respond(tab-port) {
+    grid-template-columns: 1fr;
+    &__img {
+      margin: auto;
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+    &__text {
+      padding: 6rem 3rem;
+    }
+  }
+}
+
+.offers {
+  padding-top: 0;
+
+  &__content {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 4rem;
+    @include respond(tab-port) {
+      grid-template-columns: 1fr 1fr;
+    }
+    @include respond(phone) {
+      grid-template-columns: 1fr;
+      text-align: right !important;
+    }
+  }
+}
+
+.our-team {
+  &__content {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 2rem;
+  }
+}
+
+.team-member {
+  flex-direction: column;
+  &__img {
+    border-radius: 50%;
+    width: 100%;
+  }
+
+  &__name {
+    margin: 3rem auto 0.5rem auto;
+    font-size: 1.8rem;
+    color: var(--color-grey-dark-0);
+    margin-bottom: 0.5rem;
+  }
+
+  &__title {
+  }
+}
+
+.our-projects {
+  &__content {
+    padding-top: 2.5rem;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 2rem;
+  }
+}
+.project {
+  position: relative;
+  &__img {
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+  }
+  i {
+    font-size: 2.8rem;
+    z-index: 10;
+    color: white;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: all 0.2s;
+    visibility: hidden;
+    opacity: 0;
+    cursor: pointer;
+    i:hover {
+      color: var(--primary-color);
+      background-color: var(--primary-color);
+    }
+  }
+
+  &:hover .overlay {
+    height: 100%;
+  }
+  &:hover i {
+    top: 50%;
+    visibility: visible;
+    opacity: 1;
+  }
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 0;
+  background-color: rgba($color-grey-dark-0, 0.9);
+  z-index: 4;
+  transition: all 0.2s;
+}
+
+.call-us {
+  background-color: var(--primary-color);
+  color: white;
+  &__content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+}

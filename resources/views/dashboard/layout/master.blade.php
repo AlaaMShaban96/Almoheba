@@ -28,20 +28,20 @@
       </div>
       <div class="sidebar-wrapper">
         <ul class="nav">
-          <li class="nav-item {{ (\Request::route()->getName() == 'dashboard') ? 'active' : '' }}">
-            <a class="nav-link" href="{{url('dashboard/')}}">
-              <i class="material-icons">dashboard</i>
+          <li class="nav-item {{ (\Request::route()->getName() == 'Dashboard') ? 'active' : '' }}">
+            <a class="nav-link" href="{{url('Dashboard/')}}">
+              <i class="material-icons">Dashboard</i>
               <p>لوحة تحكم</p>
             </a>
           </li>
           <li class="nav-item {{ (\Request::route()->getName() == 'team') ? 'active' : '' }}">
-            <a class="nav-link" href="{{url('dashboard/team')}}">
+            <a class="nav-link" href="{{url('Dashboard/team/')}}">
                  <p><span class="material-icons">engineering</span>
                              فريق العمل</p>
             </a> 
           </li>
           <li class="nav-item {{ (\Request::route()->getName() == 'project') ? 'active' : '' }}">
-            <a class="nav-link" href="{{url('dashboard/project')}}">
+            <a class="nav-link" href="{{url('Dashboard/project')}}">
               <p><span class="material-icons">
                 handyman
                 </span>
@@ -49,7 +49,7 @@
             </a>
           </li>
           <li class="nav-item {{ (\Request::route()->getName() == 'aboutUs') ? 'active' : '' }}">
-            <a class="nav-link" href="{{url('dashboard/aboutUs')}}">
+            <a class="nav-link" href="{{url('Dashboard/aboutUs')}}">
               <p><span class="material-icons">
                 folder_shared
                 </span>

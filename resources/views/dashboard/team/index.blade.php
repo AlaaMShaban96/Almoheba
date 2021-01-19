@@ -65,7 +65,7 @@
                         <a href="#" onclick="deletee({{$boss->id}})" rel="tooltip"  class="btn btn-danger btn-link btn-sm" >
                           <i class="material-icons">close</i>
                         </a>
-                        <form style="display: none" id="delete{{$boss->id}}" action="{{url('dashboard/team/'.$boss->id)}}" method="post">
+                        <form style="display: none" id="delete{{$boss->id}}" action="{{url('Dashboard/team/'.$boss->id)}}" method="post">
                           @method('delete')
                           @csrf
                         {{-- <button  type="submit"></button> --}}
@@ -98,7 +98,7 @@
                         <a href="#" onclick="deletee({{$employ->id}})" rel="tooltip"  class="btn btn-danger btn-link btn-sm" >
                           <i class="material-icons">close</i>
                         </a>
-                        <form style="display: none" id="delete{{$employ->id}}" action="{{url('dashboard/team/'.$employ->id)}}" method="post">
+                        <form style="display: none" id="delete{{$employ->id}}" action="{{url('Dashboard/team/'.$employ->id)}}" method="post">
                           @method('delete')
                           @csrf
                         {{-- <button  type="submit"></button> --}}
@@ -124,7 +124,7 @@
             <p class="card-category">ادراج بيانات موظف في الموقع</p>
           </div>
           <div class="card-body">
-            <form id="card-form" action="{{url('dashboard/team')}}" method="POST" enctype="multipart/form-data">
+            <form id="card-form" action="{{url('Dashboard/team/x')}}" method="POST" enctype="multipart/form-data">
               @csrf
               @method('POST')
               <div class="row">
@@ -235,7 +235,7 @@
 @endforeach
 @endif
 
-<script src="{{asset('js/dashboard/team/index.js')}}"></script>
+<script src="{{asset('dashboard/team/index.js')}}"></script>
 
 
 @endsection

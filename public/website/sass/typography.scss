@@ -1,0 +1,32 @@
+.primary-heading {
+  font-size: 6.5rem;
+  @media only screen and (max-width: 765px) {
+    font-size: 3.5rem;
+  }
+}
+
+.secondary-heading {
+  font-size: 3.6rem;
+  margin: 1rem 0;
+  color: var(--color-grey-dark-0);
+}
+
+.territiary-heading {
+  margin: 1rem 0;
+  font-size: 1.8rem;
+  color: var(--color-grey-dark-0, black);
+}
+
+.paragraph {
+  margin: 3rem 0 1rem 0;
+  letter-spacing: normal;
+  line-height: 24px;
+  color: var(--color-grey-light-0);
+  font-weight: 300;
+}
+
+.header__paragraph {
+  @media only screen and (max-width: 47.81em) {
+    width: 60%;
+  }
+}
