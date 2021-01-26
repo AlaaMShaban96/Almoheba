@@ -25,7 +25,7 @@ class WebsiteController extends Controller
     }
     public function showProject(Project $project )
     {
-        return view('website.showProject',compact('project'));
+        return view('website.project.show',compact('project'));
 
         # code...
     }

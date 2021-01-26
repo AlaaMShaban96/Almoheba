@@ -31,6 +31,7 @@ class ProjectRequest extends FormRequest
             case 'store':
                 return [
                     'description'=>['required', 'max:150'],
+                    // 'photos'=>['required'],
                     'details'=>['required'],
                     'name' => ['required', 'string', 'max:40'], 
                     'file'=>['required'],

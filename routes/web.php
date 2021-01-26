@@ -25,10 +25,10 @@ use App\Http\Controllers\DasboardController;
 // Route::get('/', function () {
 //     return view('website.index');
 // });
-
+  
 Route::get('/',[WebsiteController::class,'index'])->name('index');
 // Route::get('/project',[WebsiteController::class,'project'])->name('project');
-// Route::get('/project/{project}',[WebsiteController::class,'showProject'])->name('project');
+Route::get('/project/{project}',[WebsiteController::class,'showProject'])->name('project');
 // Route::get('/members',[WebsiteController::class,'member'])->name('member');
 // Route::get('/about',[WebsiteController::class,'about'])->name('about');
 Route::get('/login',[WebsiteController::class,'login'])->name('login');

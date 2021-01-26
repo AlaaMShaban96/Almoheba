@@ -15,6 +15,26 @@
     text-align: justify;
     width: 349px;
   }
+  div.gallery {
+  margin: 5px;
+  border: 1px solid #ccc;
+  float: left;
+  width: 180px;
+}
+
+div.gallery:hover {
+  border: 1px solid #777;
+}
+
+div.gallery img {
+  width: 100%;
+  height: auto;
+}
+
+div.desc {
+  padding: 15px;
+  text-align: center;
+}
 </style>
 @endsection
 @section('content')
@@ -45,7 +65,7 @@
               <div class="table-responsive">
                 
                 <div class="card-body">
-                    <form id="card-form" id="" action="{{url('Dashboard/project')}}" method="POST" enctype="multipart/form-data">
+                    <form id="card-form"  action="{{url('Dashboard/project')}}" method="POST" enctype="multipart/form-data">
                       @csrf
                       @method('POST')
                       <div class="row">
@@ -60,9 +80,7 @@
                                   <input type="text" name="name" id="name" class="form-control inputFileVisible" placeholder="اسم المشروع">
 
                                 </div>
-                              </div>
-                          {{-- <input type="text" name="name" id="name" class="form-control" placeholder="اسم الموظف"> --}}
-                          
+                              </div>                          
                         </div>
                         <div class="col">
                             <div class="form-group form-file-upload form-file-multiple bmd-form-group">
@@ -79,6 +97,19 @@
                         </div>
                       </div>
                       <div class="row">
+                        <div class="col">
+                          {{-- <div class="form-group form-file-upload form-file-multiple bmd-form-group"> --}}
+                            <input type="file" name="photos[]" multiple id="file-input"  >
+                            {{-- <div class="input-group">
+                              <input type="text" multiple  onclick="document.getElementById('file-input').click(); document.getElementById('file').value='تم التحميل'" id="file" class="form-control inputFileVisible" placeholder="تحميل صورة للمشروع">
+                              <span class="input-group-btn">
+                                <button type="button" class="btn btn-fab btn-round btn-success check">
+                                  <i class="material-icons">attach_file</i>
+                                </button>
+                              </span>
+                            </div> --}}
+                          {{-- </div> --}}
+                        </div>
                         <div class="col">
                             <div class="form-group form-file-upload form-file-multiple bmd-form-group">
                                 <div class="input-group">
@@ -105,7 +136,18 @@
                               </div>
                         </div>
                       </div>  
+                      <div class="row" id="gallery">
+                        <div class="gallery">
+                          <a target="_blank" href="https://tutsforweb.com/wp-content/uploads/2018/04/dump.png">
+                            <img src="https://tutsforweb.com/wp-content/uploads/2018/04/dump.png" alt="Cinque Terre" width="600" height="400">
+                          </a>
+
+                              <input type="checkbox" name="gallery" id="">
+                        </div>
+                      </div>  
+                            
                       <button type="submit" id="submit-button" class="btn btn-success pull-right check">اضافة مشروع</button>
+                   
                     </form>
                   </div>
 
@@ -193,9 +235,7 @@
       </div>
     </div>
   </div>
-<script>
-  
-</script>
+
 
 
 @endsection

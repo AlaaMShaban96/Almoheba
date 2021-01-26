@@ -1,5 +1,11 @@
-@extends('website.layout.master')
+@extends("website.layout.master")
+@section('style')
+    
+@endsection
 @section('content')
+@include('website.layout.component.header')
+<main>
+
   <section class="who-we-are container--row u-margin-top-special u-margin-bottom-special">
     <div class="who-we-are__img">
       <img src="website/img/about-construction.png" alt="">
@@ -129,18 +135,21 @@
   </section>
 
   <section class="u-margin-bottom-special container--row our-projects u-responsive-margin-top">
-    <h2 class="secondary-heading u-center-text">يوجد نص هنا</h2>
-    <h3 class="territiary-heading u-center-text u-margin-bottom-big">
-      يوجد نص هنا
-    </h3>
+    <h2 class="secondary-heading u-center-text">مشارعنا</h2>
+   
     <div class="our-projects__content">
-      <div class="project">
-        <img src="website/img/img-19.jpg" alt="" class="project__img">
-        <i class="mdi mdi-image-plus"></i>
-        <div class="overlay"></div>
-      </div>
+      @foreach ($projects as $project)
+        <div class="project">
+          <a href='{{url("/project/$project->id")}}' target="_blank" rel="noopener noreferrer">
+          <img src="{{$project->image}}" alt="" class="project__img">
+           <i > عرض </i>
+          </a>
+          <div class="overlay"></div>
+        </div>
+      @endforeach
+     
       <!--./project-->
-      <div class="project">
+      {{-- <div class="project">
         <img src="website/img/img-20.jpg" alt="" class="project__img">
         <i class="mdi mdi-image-plus"></i>
         <div class="overlay"></div>
@@ -181,7 +190,7 @@
         <i class="mdi mdi-image-plus"></i>
         <div class="overlay"></div>
       </div>
-      <!--./project-->
+      <!--./project--> --}}
     </div>
     <!--./our-projects__content-->
   </section>
@@ -208,6 +217,7 @@
       <a href="#" class="btn btn-black">إتصل بنا</a>
     </div>
   </section>
+</main>
 @endsection
    
    

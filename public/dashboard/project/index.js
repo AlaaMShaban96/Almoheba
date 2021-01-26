@@ -23,7 +23,12 @@ function showAddProject() {
 
 
 function show(app,index) {
+  console.log(app[index]['images']);
   var url= window.location.hostname;
+  var protocol= window.location.protocol;
+  var port= window.location.port;
+  var link= protocol+'//'+url+':'+port+'/';
+
   document.getElementById('name').value=app[index]['name'];
   document.getElementById('description').value=app[index]['description'];
   $('#details').summernote('code', app[index]['details']);
@@ -32,6 +37,11 @@ function show(app,index) {
   document.getElementById('card-header').classList.add('card-header-warning');
   document.getElementById('addProject').classList.remove('project');
   document.getElementById('addProject').classList.add('add-project');
+  document.getElementById('gallery').innerHTML='';
+
+  app[index]['images'].forEach(image => {
+    document.getElementById('gallery').innerHTML+=' <div class="gallery"><a target="_blank" href="'+link+image.image+'"><img src="'+link+image.image+'" alt="Cinque Terre" width="600" height="400"></a><input type="checkbox" name="deleteGallery[]" value="'+image.id+'"></div>';
+});
 
     elementSameClass= document.getElementsByClassName('check');
     for (let item of elementSameClass) {
