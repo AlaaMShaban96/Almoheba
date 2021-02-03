@@ -11,7 +11,6 @@
     .background--2{
       background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("{{$second->image}}")
     }
-    //edit
   </style>  
 @endif
 

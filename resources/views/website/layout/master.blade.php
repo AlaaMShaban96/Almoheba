@@ -44,16 +44,16 @@
       <div class="footer__content container--row">
         <p class="footer__paragraph">جميع حقوق النشر محفوظة &copy; لشركة</p>
         <div class="social-media">
-          <a href="#" class="social-media__link">
+          <a href="https://www.facebook.com/almawhiba.ly" class="social-media__link">
             <img
               src="{{asset('website/img/logo/facebook-circle.svg')}}"
               alt=""
               class="social-media__icon"
             />
           </a>
-          <a href="#" class="social-media__link">
+          {{-- <a href="#" class="social-media__link">
             <img src="{{asset('website/img/logo/linkedin-circle.svg')}}"alt=""class="social-media__icon"/>
-          </a>
+          </a> --}}
         </div>
       </div>
     </footer>
