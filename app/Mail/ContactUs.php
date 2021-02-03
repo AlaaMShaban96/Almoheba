@@ -29,7 +29,7 @@ class ContactUs extends Mailable
     public function build()
     {
         
-        return $this->from('in444fo@almawhiba.ly')
+        return $this->from('info@almawhiba.ly')
                 ->view('emails.contactUs')
                 ->with([
                     'data' => $this->contactUs->all()
