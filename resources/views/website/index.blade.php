@@ -6,6 +6,7 @@
 @include('website.layout.component.header')
 <main>
 
+  @if (isset($aboutUs))
   <section class="who-we-are container--row u-margin-top-special u-margin-bottom-special">
     <div class="who-we-are__img">
       <img src='{{asset("$aboutUs->image") }}' alt="">
@@ -20,7 +21,9 @@
      
       <a href="{{url('/about')}}" class="btn">إقرا المزيد</a>
     </div>
-  </section>
+  </section>  
+  @endif
+  
 
   <section class="offers u-margin-bottom-special container--row">
     <h2 class="secondary-heading u-center-text">خدماتنا</h2>
@@ -76,6 +79,7 @@
     </div>
   </section>
 
+  @if (isset($teams))
   <section class="our-team u-margin-bottom-special container--row">
     <h2 class="secondary-heading u-center-text">فريقنا</h2>
     
@@ -108,68 +112,72 @@
       </div>
       <!--./team-member--> --}}
     </div>
-  </section>
-
-  <section class="u-margin-bottom-special container--row our-projects u-responsive-margin-top">
-    <h2 class="secondary-heading u-center-text">مشارعنا</h2>
+  </section>  
+  @endif
+ 
+@if (isset($projects))
+<section class="u-margin-bottom-special container--row our-projects u-responsive-margin-top">
+  <h2 class="secondary-heading u-center-text">مشارعنا</h2>
+ 
+  <div class="our-projects__content">
+    @foreach ($projects as $project)
+      <div class="project">
+        <a href='{{url("/project/$project->id")}}' target="_blank" rel="noopener noreferrer">
+        <img src="{{$project->image}}" alt="" class="project__img">
+         <i > عرض </i>
+        </a>
+        <div class="overlay"></div>
+      </div>
+    @endforeach
    
-    <div class="our-projects__content">
-      @foreach ($projects as $project)
-        <div class="project">
-          <a href='{{url("/project/$project->id")}}' target="_blank" rel="noopener noreferrer">
-          <img src="{{$project->image}}" alt="" class="project__img">
-           <i > عرض </i>
-          </a>
-          <div class="overlay"></div>
-        </div>
-      @endforeach
-     
-      <!--./project-->
-      {{-- <div class="project">
-        <img src="website/img/img-20.jpg" alt="" class="project__img">
-        <i class="mdi mdi-image-plus"></i>
-        <div class="overlay"></div>
-      </div>
-      <!--./project-->
-      <div class="project">
-        <img src="website/img/img-21.jpg" alt="" class="project__img">
-        <i class="mdi mdi-image-plus"></i>
-        <div class="overlay"></div>
-      </div>
-      <!--./project-->
-      <div class="project">
-        <img src="website/img/img-22.jpg" alt="" class="project__img">
-        <i class="mdi mdi-image-plus"></i>
-        <div class="overlay"></div>
-      </div>
-      <!--./project-->
-      <div class="project">
-        <img src="website/img/img-23.jpg" alt="" class="project__img">
-        <i class="mdi mdi-image-plus"></i>
-        <div class="overlay"></div>
-      </div>
-      <!--./project-->
-      <div class="project">
-        <img src="website/img/img-24.jpg" alt="" class="project__img">
-        <i class="mdi mdi-image-plus"></i>
-        <div class="overlay"></div>
-      </div>
-      <!--./project-->
-      <div class="project">
-        <img src="website/img/img-25.jpg" alt="" class="project__img">
-        <i class="mdi mdi-image-plus"></i>
-        <div class="overlay"></div>
-      </div>
-      <!--./project-->
-      <div class="project">
-        <img src="website/img/img-26.jpg" alt="" class="project__img">
-        <i class="mdi mdi-image-plus"></i>
-        <div class="overlay"></div>
-      </div>
-      <!--./project--> --}}
+    <!--./project-->
+    {{-- <div class="project">
+      <img src="website/img/img-20.jpg" alt="" class="project__img">
+      <i class="mdi mdi-image-plus"></i>
+      <div class="overlay"></div>
     </div>
-    <!--./our-projects__content-->
-  </section>
+    <!--./project-->
+    <div class="project">
+      <img src="website/img/img-21.jpg" alt="" class="project__img">
+      <i class="mdi mdi-image-plus"></i>
+      <div class="overlay"></div>
+    </div>
+    <!--./project-->
+    <div class="project">
+      <img src="website/img/img-22.jpg" alt="" class="project__img">
+      <i class="mdi mdi-image-plus"></i>
+      <div class="overlay"></div>
+    </div>
+    <!--./project-->
+    <div class="project">
+      <img src="website/img/img-23.jpg" alt="" class="project__img">
+      <i class="mdi mdi-image-plus"></i>
+      <div class="overlay"></div>
+    </div>
+    <!--./project-->
+    <div class="project">
+      <img src="website/img/img-24.jpg" alt="" class="project__img">
+      <i class="mdi mdi-image-plus"></i>
+      <div class="overlay"></div>
+    </div>
+    <!--./project-->
+    <div class="project">
+      <img src="website/img/img-25.jpg" alt="" class="project__img">
+      <i class="mdi mdi-image-plus"></i>
+      <div class="overlay"></div>
+    </div>
+    <!--./project-->
+    <div class="project">
+      <img src="website/img/img-26.jpg" alt="" class="project__img">
+      <i class="mdi mdi-image-plus"></i>
+      <div class="overlay"></div>
+    </div>
+    <!--./project--> --}}
+  </div>
+  <!--./our-projects__content-->
+</section> 
+@endif
+  
 
 </main>
 @endsection
