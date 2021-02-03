@@ -3,14 +3,17 @@
    $second= App\Models\Cover::all()->get(1);
   //  $first= App\Models\Cover::first();
 @endphp
-<style>
-  .background--1{
-    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("{{$first->image}}")
-  }
-  .background--2{
-    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("{{$second->image}}")
-  }
-</style>
+@if (isset($first->image))
+  <style>
+    .background--1{
+      background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("{{$first->image}}")
+    }
+    .background--2{
+      background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("{{$second->image}}")
+    }
+  </style>  
+@endif
+
 <header class="header background--1" >
     <div class="borderline u-padding-top-bottom-small">
       <div class="container--row flex-it">
