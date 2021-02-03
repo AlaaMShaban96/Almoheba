@@ -3,9 +3,12 @@
 namespace App\Http\Controllers;
 
 use App\Models\Team;
+use App\Mail\ContactUs;
 use App\Models\AboutUs;
 use App\Models\Project;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Mail;
+
 
 class WebsiteController extends Controller
 {
@@ -19,7 +22,7 @@ class WebsiteController extends Controller
     public function project()
     {
         $projects=Project::all();
-        return view('website.project',compact('projects'));
+        return view('website.project.index',compact('projects'));
 
         # code...
     }
@@ -32,7 +35,7 @@ class WebsiteController extends Controller
     public function member()
     {
         $teams=Team::all();
-        return view('website.members',compact('teams'));
+        return view('website.team.index',compact('teams'));
 
     }
     public function about()
@@ -45,5 +48,11 @@ class WebsiteController extends Controller
     public function login()
     {
         return view('website.login');
+    }
+    public function send(Request $request)
+    {
+        // dd($request->all());
+        Mail::to('info@almawhiba.ly')->send(new ContactUs($request));
+        return redirect('/');
     }
 }

@@ -15,23 +15,23 @@
           <nav class="navigation">
             <ul class="navigation__list">
               <li class="navigation__item">
-                <a href="index.html" class="navigation__link">الصفحة الرئيسية</a>
+                <a href="{{url('/')}}" class="navigation__link">الصفحة الرئيسية</a>
               </li>
               <li class="navigation__item">
-                <a href="about.html" class="navigation__link">حولنا</a>
+                <a href="{{url('/about')}}" class="navigation__link">حولنا</a>
               </li>
               <li class="navigation__item">
-                <a href="team.html" class="navigation__link">فريقنا</a>
+                <a href="{{url('/teams')}}" class="navigation__link">فريقنا</a>
               </li>
               <li class="navigation__item">
                 <a href="#contact-us" class="navigation__link">تواصل معنا</a>
               </li>
               <li class="navigation__item">
-                <a href="projects.html" class="navigation__link">مشاريعنا</a>
+                <a href="{{url('/project')}}" class="navigation__link">مشاريعنا</a>
               </li>
-              <li class="navigation__item">
+              {{-- <li class="navigation__item">
                 <a href="#" class="navigation__btn">أحصل على حاجتك</a>
-              </li>
+              </li> --}}
             </ul>
           </nav>
         </div>

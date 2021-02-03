@@ -65,7 +65,8 @@
    
     </div>
     <div style="text-align: center;">
-      <img src="{{asset('website/img/logo.png')}}" alt="" srcset="">
+      {{-- <img src="{{asset('website/img/logo.png')}}" alt="" srcset=""> --}}
+      <img class="img" src="{{asset('website/img/logo-black.png')}}" style="width: 40%;">
 
     </div>
     

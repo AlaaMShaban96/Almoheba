@@ -1,4 +1,17 @@
-<header class="header background--1">
+@php
+   $first= App\Models\Cover::all()->get(0);
+   $second= App\Models\Cover::all()->get(1);
+  //  $first= App\Models\Cover::first();
+@endphp
+<style>
+  .background--1{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("{{$first->image}}")
+  }
+  .background--2{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("{{$second->image}}")
+  }
+</style>
+<header class="header background--1" >
     <div class="borderline u-padding-top-bottom-small">
       <div class="container--row flex-it">
         <div class="nav_icons">
@@ -15,25 +28,25 @@
           <nav class="navigation">
             <ul class="navigation__list">
               <li class="navigation__item">
-                <a href="index.html" class="navigation__link"
+                <a href="{{url('/')}}" class="navigation__link"
                   >الصفحة الرئيسية</a
                 >
               </li>
               <li class="navigation__item">
-                <a href="about.html" class="navigation__link">حولنا</a>
+                <a href="{{url('/about')}}" class="navigation__link">حولنا</a>
               </li>
               <li class="navigation__item">
-                <a href="team.html" class="navigation__link">فريقنا</a>
+                <a href="{{url('/teams')}}" class="navigation__link">فريقنا</a>
               </li>
               <li class="navigation__item">
                 <a href="#" class="navigation__link">تواصل معنا</a>
               </li>
               <li class="navigation__item">
-                <a href="#" class="navigation__link">مشاريعنا</a>
+                <a href="{{url('/project')}}" class="navigation__link">مشاريعنا</a>
               </li>
-              <li class="navigation__item">
+              {{-- <li class="navigation__item">
                 <a href="#" class="navigation__btn">أحصل على حاجتك</a>
-              </li>
+              </li> --}}
             </ul>
           </nav>
         </div>
@@ -54,11 +67,7 @@
       </div>
       <div class="header__content-1">
         <h1 class="primary-heading">مرحبا بك في <br />شركة الموهيبة</h1>
-       
-        <div class="header__buttons">
-          <a href="#" class="btn">تاريخنا</a>
-          <a href="#" class="btn btn-white">مشاريعنا</a>
-        </div>
+      
       </div>
     </div>
   </header>

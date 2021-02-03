@@ -29,8 +29,8 @@
       <div class="sidebar-wrapper">
         <ul class="nav">
           <li class="nav-item {{ (\Request::route()->getName() == 'Dashboard') ? 'active' : '' }}">
-            <a class="nav-link" href="{{url('Dashboard/')}}">
-              <i class="material-icons">Dashboard</i>
+            <a class="nav-link active show" href="{{url('Dashboard/')}}">
+              <i class="material-icons">dashboard</i>
               <p>لوحة تحكم</p>
             </a>
           </li>
@@ -53,7 +53,15 @@
               <p><span class="material-icons">
                 folder_shared
                 </span>
-                  حول النشاط</p>
+                  حول </p>
+            </a>
+          </li>
+          <li class="nav-item {{ (\Request::route()->getName() == 'setting') ? 'active' : '' }}">
+            <a class="nav-link" href="{{url('Dashboard/setting')}}">
+              <p>
+                <span class="material-icons">list</span>
+                الاعدادات
+              </p>
             </a>
           </li>
           <!-- your sidebar here -->
