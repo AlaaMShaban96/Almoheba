@@ -2,14 +2,14 @@
     <div class="borderline u-padding-top-bottom-small u-dark">
       <div class="container--row flex-it">
         <div class="nav_icons">
-          <img src="img/logo-black.png" alt="" class="logo logo-black u-hidden">
+          <img src="{{asset('website/img/logo-black.png')}}" alt="" class="logo logo-black u-hidden">
           <!-- <i class="mdi mdi-menu nav_icon hamburger-menu"></i> -->
           <div class="hamburger-menu">
             <div class="hamburger-menu__icon icon--top"></div>
             <div class="hamburger-menu__icon icon--mid"></div>
             <div class="hamburger-menu__icon icon--bottom"></div>
           </div>
-          <img src="img/logo-white.png" alt="" class="logo logo-white">
+          <img src="{{asset('website/img/logo-black.png')}}" alt="" class="logo logo-white">
         </div>
         <div class="flex-it">
           <nav class="navigation">

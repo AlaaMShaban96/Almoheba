@@ -14,7 +14,7 @@
         
         </div>
         <div class="about__img">
-          <img src='{{asset("$aboutUs->image")}}' alt="" />
+          <img class="img" width="100%" src='{{asset("$aboutUs->image")}}' alt="" />
         </div>
       </section>
     </main>
