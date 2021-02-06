@@ -3,8 +3,8 @@
 
 @section('content')
 @include('website.layout.component.nav')
-<main style="margin-top: 0px;padding-top: 5%;">
-<section class="u-margin-bottom-special container--row our-projects u-responsive-margin-top">
+<main style="margin-top: 0px;padding-top: 13%;">
+<section class="team u-margin-top-medium container--row u-margin-bottom-medium">
     <h2 class="secondary-heading u-center-text">مشارعنا</h2>
    
     <div class="our-projects__content">

@@ -422,6 +422,7 @@ body {
   position: relative;
   width: 10rem;
   height: 5rem;
+  order: 2;
 }
 
 @media only screen and (max-width: 765px) {
@@ -549,7 +550,7 @@ body {
     display: block;
     -webkit-box-ordinal-group: 3;
         -ms-flex-order: 2;
-            order: 2;
+            order: 1;
   }
 }
 
@@ -601,7 +602,7 @@ body {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    height: 6rem;
+     height: 100%;
   }
 }
 

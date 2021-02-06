@@ -4,7 +4,7 @@
 
 @section('content')
 @include('website.layout.component.nav')
-    <main style="margin-top: 0px;padding-top: 5%;">
+    <main style="margin-top: 0px;padding-top: 13%;">
       <section class="about u-margin-top-bottom container--row">
         <div class="about__text">
           <h2 class="secondary-heading">{{ $aboutUs->titel }}</h2>

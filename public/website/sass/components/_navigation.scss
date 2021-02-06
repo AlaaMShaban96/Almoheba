@@ -61,7 +61,7 @@
 .logo-black {
   @media only screen and (max-width: 47.81em) {
     display: block;
-    order: 2;
+    order: 1;
   }
 }
 
@@ -91,7 +91,7 @@
     flex: 0 0 58%;
     justify-content: end;
     flex-direction: column;
-    height: 6rem;
+    height: 8rem;
   }
   @include respond(middle-ground) {
     flex: 0 0 58%;
